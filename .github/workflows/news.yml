@@ -1,0 +1,27 @@
+name: News Warnings Automation
+
+on:
+  schedule:
+    # Runs every hour; adjust as needed
+    - cron: '0 * * * *'
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  post-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm install rss-parser node-fetch
+
+      - name: Run News Script
+        env:
+          NewsWarningsBot: ${{ secrets.NewsWarningsBot }}
+        run: node news.js
