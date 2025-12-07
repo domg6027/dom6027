@@ -84,3 +84,26 @@ footer {
   display: block;
   margin: 0 auto;
 }
+
+/* === FOOTER === */
+
+.do-footer {
+  width: 100%;
+  background-color: #f8e7b0; /* corn */
+  border-top: 4px solid #2f8a11; /* green */
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 40px;
+  font-size: 1rem;
+  color: #000; /* black text */
+}
+
+.do-footer-line {
+  margin: 6px 0;
+}
+
+.do-footer a {
+  color: blue;
+  text-decoration: underline;
+  font-weight: bold;
+}
