@@ -66,3 +66,21 @@ footer {
   border-top: 4px solid #2f8a11;
   text-align: center;
 }
+
+/* === HEADER IMAGE === */
+
+.do-header {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f8e7b0; /* corn */
+  border-bottom: 4px solid #2f8a11; /* green */
+}
+
+.do-header-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
