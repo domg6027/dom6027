@@ -1,0 +1,15 @@
+{
+  "name": "news-warnings",
+  "version": "1.0.0",
+  "description": "Automated News Warnings for GitHub Discussion #5",
+  "main": "news.js",
+  "scripts": {
+    "start": "node news.js"
+  },
+  "dependencies": {
+    "rss-parser": "^4.12.0",
+    "node-fetch": "^3.4.0"
+  },
+  "author": "domg6027",
+  "license": "MIT"
+}
