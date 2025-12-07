@@ -1,0 +1,19 @@
+{
+  "last_posted": {
+    "gregorian": "2025-12-07T12:46:00+02:00",
+    "timezone": "SAST"
+  },
+  "sources": [
+    {
+      "name": "Times of Israel",
+      "url": "https://www.timesofisrael.com/the-daily-edition/rss-feed/",
+      "type": "rss"
+    },
+    {
+      "name": "End Times Headlines",
+      "url": "https://endtimeheadlines.org/feed/",
+      "type": "rss"
+    }
+  ],
+  "posts": []
+}
