@@ -21,9 +21,9 @@ jobs:
           node-version: '20'
 
       - name: Install Dependencies
-        run: npm install rss-parser node-fetch
+        run: npm install
 
       - name: Run News Script
         env:
           NewsWarningsBot: ${{ secrets.NewsWarningsBot }}
-        run: node news.js
+        run: npm run start
