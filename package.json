@@ -6,10 +6,12 @@
   "scripts": {
     "start": "node news.js"
   },
+
   "dependencies": {
     "rss-parser": "^3.12.0",
     "node-fetch": "^3.3.0"
   },
+  
   "author": "domg6027",
   "license": "MIT"
 }
