@@ -4,24 +4,27 @@ name: News Warnings Automation
 
 on:
   schedule:
-    # Runs every hour; adjust as needed
+    # Runs every hour
     - cron: '0 * * * *'
-  workflow_dispatch: # Allows manual trigger
+  workflow_dispatch:
 
 jobs:
   post-news:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4   # ← updated to the latest stable version
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4 # ← updated to latest version
         with:
           node-version: '20'
+          cache: 'npm'             # ← improves reliability & speed
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci || npm install
+        # `npm ci` is the cleanest, but fallback to `npm install` if needed
 
       - name: Run News Script
         env:
