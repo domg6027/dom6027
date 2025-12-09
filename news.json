@@ -5,11 +5,6 @@
   },
   "sources": [
     {
-      "name": "Times of Israel",
-      "url": "https://www.timesofisrael.com/the-daily-edition/rss-feed/",
-      "type": "rss"
-    },
-    {
       "name": "End Times Headlines",
       "url": "https://endtimeheadlines.org/feed/",
       "type": "rss"
