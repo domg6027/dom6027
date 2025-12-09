@@ -2,7 +2,11 @@
 const fs = require('fs');
 const path = require('path');
 const Parser = require('rss-parser');
-const fetch = require('node-fetch'); // For GitHub API calls
+
+// Node-fetch v3 compatibility wrapper for CommonJS:
+const fetch = (...args) =>
+  import('node-fetch').then(({ default: fetch }) => fetch(...args));
+
 const parser = new Parser();
 
 // --- CONFIG ---
@@ -40,7 +44,7 @@ async function fetchFeed(feed) {
 
     return newItems;
   } catch (err) {
-    console.error(`Error fetching ${feed.name}:`, err);
+    console.error(`Error fetching ${feed.name}:`, err.message || err);
     return [];
   }
 }
@@ -85,7 +89,7 @@ async function run() {
   // Sort by date ascending
   allNewPosts.sort((a, b) => new Date(a.date) - new Date(b.date));
 
-  // Post each new item to GitHub Discussion #5
+  // Post each new item to GitHub
   for (const post of allNewPosts) {
     await postToGitHub(post);
   }
@@ -93,6 +97,7 @@ async function run() {
   // Update last_posted timestamp
   newsData.last_posted.gregorian = new Date().toISOString();
   fs.writeFileSync(newsFile, JSON.stringify(newsData, null, 2));
+
   console.log('news.json updated with new last_posted timestamp.');
 }
 
