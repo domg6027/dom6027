@@ -5,6 +5,11 @@
   },
   "sources": [
     {
+      "name": "Behold Israel",
+      "url": "https://beholdisrael.org/feed/",
+      "type": "rss"
+    },
+    {
       "name": "End Times Headlines",
       "url": "https://endtimeheadlines.org/feed/",
       "type": "rss"
