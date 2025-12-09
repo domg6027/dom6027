@@ -103,3 +103,10 @@ async function run() {
 
 // --- RUN SCRIPT ---
 run();
+
+// --- Update last_posted timestamp ---
+newsData.last_posted.gregorian = new Date().toISOString();
+newsData.last_posted.timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+// Write updated JSON back to file
+fs.writeFileSync("news.json", JSON.stringify(newsData, null, 2), "utf-8");
