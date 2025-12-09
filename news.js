@@ -10,7 +10,7 @@ const fetch = (...args) =>
 const parser = new Parser();
 
 // --- CONFIG ---
-const GITHUB_TOKEN = process.env.NewsWarningsBot; // Use secret from environment
+const GITHUB_TOKEN = process.env.NewsWarningsBot; // GitHub Secret
 if (!GITHUB_TOKEN) {
   console.error('Error: GitHub token not found in environment variable NewsWarningsBot.');
   process.exit(1);
@@ -94,8 +94,9 @@ async function run() {
     await postToGitHub(post);
   }
 
-  // Update last_posted timestamp
+  // --- UPDATE LAST POSTED ---
   newsData.last_posted.gregorian = new Date().toISOString();
+  newsData.last_posted.timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   fs.writeFileSync(newsFile, JSON.stringify(newsData, null, 2));
 
   console.log('news.json updated with new last_posted timestamp.');
@@ -103,10 +104,3 @@ async function run() {
 
 // --- RUN SCRIPT ---
 run();
-
-// --- Update last_posted timestamp ---
-newsData.last_posted.gregorian = new Date().toISOString();
-newsData.last_posted.timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-
-// Write updated JSON back to file
-fs.writeFileSync("news.json", JSON.stringify(newsData, null, 2), "utf-8");
