@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Davar Lechem - Daily Word from Derech Olam Ministries">
+  <meta name="author" content="Derech Olam Ministries">
+  <title>PESACH SHENI MORNING MESSAGE, {{CREATIONAL_DATE}}</title>
+  <link rel="stylesheet" href="https://saphahcentral.github.io/saphah/style-public.css">
+
+  <script defer>
+    fetch("header.html").then(r => r.text()).then(d => document.getElementById("header").innerHTML = d);
+    fetch("nav_bar.html").then(r => r.text()).then(d => document.getElementById("nav_bar").innerHTML = d);
+    fetch("footer.html").then(r => r.text()).then(d => document.getElementById("footer").innerHTML = d);
+  </script>
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav_bar"></div>
+
+  <!--TITLE AREA-->
+  <div style="clear: both; margin-top: 20px;">
+    <h1 style="color: #1f1f1f; font-family: Montserrat; font-size: x-large; text-align: center;">
+      <b>PESACH SHENI MORNING MESSAGE, {{CREATIONAL_DATE}}</b>
+    </h1>
+  </div>
+
+  <hr />
+
+  <!--SERMON AREA: SHOFAR, MESSAGE, SHEMA and BLESSING-->
+  <br /><br />
+  <div class="separator" style="clear: both; text-align: center;">
+    <a href="{{SHOFAR_LINK}}"><b><span style="font-size: large;">SHOFAR BLAST</span></b></a>
+  </div>
+  <br /><br />
+
+  <h4>📖 Morning Message</h4>
+  <p>{{MORNING_MESSAGE_TEXT}}</p>
+
+  <h4>🤲🏻 Closing Prayer</h4>
+  <p>{{CLOSING_PRAYER_TEXT}}</p>
+
+  <h4>🕎 Shema</h4>
+  <blockquote>{{SHEMA_TEXT}}</blockquote>
+
+  <h4>🔥 Blessing</h4>
+  <blockquote>{{BLESSING_TEXT}}</blockquote>
+
+  <p><strong>Until tomorrow. Shalom!</strong></p>
+
+  <hr />
+  <br /><br />
+
+  <div id="footer"></div>
+</body>
+</html>
