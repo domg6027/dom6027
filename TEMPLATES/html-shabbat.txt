@@ -21,6 +21,11 @@
   <h1>${creational_date_long}</h1>
 
   <!-- SHABBAT MAIN MESSAGE (full content, except Shalom line) -->
+  <div style="font-size: x-large; text-align: center;">
+    <a href="https://drive.google.com/file/d/1webn7eirKVQE5v0Th0XqQe-QjPxW1KHv/view?usp=drive_link"><b>SHOFAR BLAST</b></a>
+  </div>
+  <br /><br />
+
   <section id="message">
     ${main_message}
   </section>
