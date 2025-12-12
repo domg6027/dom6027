@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Davar Lechem - Daily Word from Derech Olam Ministries">
+  <meta name="author" content="Derech Olam Ministries">
+  <title>YOM KIPPUR {{YEAR}} MESSAGE</title>
+  <link rel="stylesheet" href="https://saphahcentral.github.io/saphah/style-public.css">
+
+  <script src="include.js" defer></script>
+</head>
+
+<body>
+  <div data-include="header.html"></div>
+  <div data-include="nav_bar.html"></div>
+
+  <!-- TITLE AREA -->
+  <div style="clear: both; margin-top: 20px;">
+    <h1 style="color: #1f1f1f; font-family: Montserrat; font-size: x-large; text-align: center;">
+      <b>YOM KIPPUR {{YEAR}}</b>
+    </h1>
+  </div>
+
+  <hr />
+
+  <!-- SHOFAR LINK -->
+  <div style="font-size: x-large; text-align: center;">
+    <a href="https://www.youtube.com/watch?v=VPMicPoXewc?si=7ZbbsqWk90i1TG0m" target="_blank"><b>SHOFAR BLAST</b></a>
+  </div>
+  <br /><br />
+
+  <h2>✨ YOM KIPPUR ✨</h2>
+  <p>Theme: {{THEME}}</p>
+
+  <h4>🤲🏻 Opening Prayer</h4>
+  <p>{{OPENING_PRAYER}}</p>
+
+  <h4>🍷 Communion</h4>
+  <p>{{COMMUNION}}</p>
+
+  <h4>📖 Message</h4>
+  <p>{{MAIN_MESSAGE}}</p>
+
+  <h4>🤲🏻 Closing Prayer</h4>
+  <p>{{CLOSING_PRAYER}}</p>
+
+  <h4>🕎 Shema</h4>
+  <p>
+    <a href="https://drive.google.com/file/d/1tmjSWYabpVBSjmbVyqyq9p9jJ36On82r/view?usp=drive_link" target="_blank">✨ Shema</a>
+  </p>
+
+  <h4>🔥 Blessing</h4>
+  <p>
+    <a href="https://drive.google.com/file/d/14c4sliGku9nJU2fwWv4IJu7qtHRvLPwV/view?usp=drive_link" target="_blank">🕎 Aaronitic Blessing</a>
+  </p>
+
+  <p><strong>Until tomorrow. Shalom!</strong></p>
+
+  <hr /><br /><br />
+
+  <div data-include="footer.html"></div>
+</body>
+</html>
