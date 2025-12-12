@@ -8,37 +8,34 @@
   <meta name="author" content="Derech Olam Ministries" />
   <title>Davar Lechem - Derech Olam Ministries</title>
 
-  <!-- local stylesheet used by the site (no inline styles here) -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- include.js (deferred) will load header/nav/footer as in index.html -->
   <script src="include.js" defer></script>
 </head>
 <body>
 
-  <!-- site chrome loaded by include.js in the same pattern as index.html -->
+  <!-- HEADER + BANNERS (loaded via header.html) -->
   <div data-include="header.html"></div>
+
+  <!-- NAVIGATION -->
   <div data-include="nav_bar.html"></div>
 
-  <!-- optional donation / calendar banners are kept as part of site chrome or message content -->
-  <!-- MESSAGE SECTION: main_message must include the whole message text (EXCEPT the final "Shalom until tomorrow!" line) -->
+  <!-- MESSAGE SECTION -->
   <section id="DAVAR-LECHEM">
     <div class="message-body">
       {main_message}
 
-      <!-- Aaronitic Blessing link immediately after the message -->
       <p>
         <a href="https://drive.google.com/file/d/14c4sliGku9nJU2fwWv4IJu7qtHRvLPwV/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
           Aaronitic Blessing
         </a>
       </p>
 
-      <!-- Final closing line must appear exactly here -->
       <p>Shalom until tomorrow!</p>
     </div>
   </section>
 
-  <!-- footer loaded by include.js -->
+  <!-- FOOTER -->
   <div data-include="footer.html"></div>
+
 </body>
 </html>
