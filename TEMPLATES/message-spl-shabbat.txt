@@ -1,0 +1,26 @@
+🌿 SPECIAL SHABBAT — {DAY_NAME} {CREATIONAL_DATE}
+
+Shalom, Mitspacha!
+
+⭐ THEME
+{THEME_TITLE}
+
+🤲🏻 Opening Prayer
+{OPENING_PRAYER_CONTENT}
+
+Baruch YHVH.
+
+🍷 Communion
+{COMMUNION_CONTENT}
+
+Baruch YHVH.
+
+📖 Message
+{MESSAGE_CONTENT}
+
+🤲🏻 Closing Prayer
+{CLOSING_PRAYER_CONTENT}
+
+Baruch YHVH.
+
+Shalom until tomorrow!
