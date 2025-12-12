@@ -79,8 +79,8 @@ footer {
 }
 
 .do-header-image {
-  width: 80%;
-  max-width: 640px;
+  width: 600px;
+  max-width: 90%;
   height: auto;
   display: block;
   margin: 2px auto;
