@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Havdalah Message - Derech Olam Ministries" />
+  <meta name="author" content="Derech Olam Ministries" />
+  <title>Havdalah - Derech Olam Ministries</title>
+
+  <!-- Local stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- include.js loads header/nav/footer -->
+  <script src="include.js" defer></script>
+</head>
+<body>
+
+  <!-- Site chrome -->
+  <div data-include="header.html"></div>
+  <div data-include="nav_bar.html"></div>
+
+  <!-- HAVDALAH MESSAGE SECTION -->
+  <section id="HAVDALAH">
+    <div class="message-body">
+
+      {main_message}
+
+      <!-- Havdalah Link -->
+      <p>
+        <a href="https://drive.google.com/file/d/1djuFJ9NxdG8nVY8q4iFcWwBpWFDfztJH/view?usp=drive_link"
+           target="_blank" rel="noopener noreferrer">
+          ✨ Havdalah
+        </a>
+      </p>
+
+      <p>Shalom until tomorrow!</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div data-include="footer.html"></div>
+
+</body>
+</html>
