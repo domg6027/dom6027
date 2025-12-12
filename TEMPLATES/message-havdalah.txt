@@ -1,0 +1,17 @@
+📨 HAVDALAH – {{CREATIONAL_DATE_FROM}} → {{CREATIONAL_DATE_TO}}
+
+Shalom, Mishpacha!
+
+{{INTRO_TEXT}}
+
+📖 TORAH READING
+{{TORAH_READING_TEXT}}
+
+{{MESSAGE_TEXT}}
+
+🙌 Prayer
+{{PRAYER_TEXT}}
+
+Baruch YHVH.
+
+Shalom until tomorrow.
