@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Tu BiShvat – The New Year of the Trees" />
+  <meta name="author" content="Derech Olam Ministries" />
+  <title>Tu BiShvat – ${creational_date_long}</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="include.js" defer></script>
+</head>
+
+<body>
+  <!-- global header & nav (loaded via include.js) -->
+  <div data-include="header.html"></div>
+  <div data-include="nav_bar.html"></div>
+
+  <!-- PAGE TITLE -->
+  <h1 style="text-align: center; font-family: Montserrat; font-size: x-large; color: #1f1f1f;">
+    Tu BiShvat — ${creational_date_long} — The New Year of the Trees
+  </h1>
+
+  <!-- MESSAGE -->
+  <section id="message" style="font-size: medium; max-width: 800px; margin: 0 auto;">
+    <p>Today marks Tu BiShvat, the New Year of the Trees. EZRA has evaluated the harvest and the trees:</p>
+
+    <p>
+      {{#if PESACH_READY}}
+        <strong>We are ready for Pesach!</strong>
+      {{else}}
+        <strong>Nature is NOT ready for Pesach yet... Leyatzev will start at moonsighting.</strong>
+      {{/if}}
+    </p>
+
+    <p>As the trees awaken and bear their first signs of life, we gain insight into the timing of the biblical New Year.</p>
+
+    <p>“He has made all matters beautiful in its time.” – Qoheleth (Ecclesiastes) 3:11</p>
+  </section>
+
+  <div data-include="footer.html"></div>
+</body>
+</html>
