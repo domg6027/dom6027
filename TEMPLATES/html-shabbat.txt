@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Shabbat Message - Derech Olam Ministries">
+  <meta name="author" content="Derech Olam Ministries">
+  <title>Shabbat Message - Derech Olam Ministries</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="include.js" defer></script>
+</head>
+
+<body>
+  <!-- Dynamic web-only components -->
+  <div data-include="header.html"></div>
+  <div data-include="nav_bar.html"></div>
+
+  <!-- CREATIONAL DATE HEADER -->
+  <h1>${creational_date_long}</h1>
+
+  <!-- SHABBAT MAIN MESSAGE (full content, except Shalom line) -->
+  <section id="message">
+    ${main_message}
+  </section>
+
+  <!-- SHEMA & BLESSING LINKS -->
+  <section id="blessings">
+    <p><a href="https://drive.google.com/file/d/1tmjSWYabpVBSjmbVyqyq9p9jJ36On82r/view?usp=drive_link" target="_blank">✨ Shema</a></p>
+
+    <p><a href="https://drive.google.com/file/d/14c4sliGku9nJU2fwWv4IJu7qtHRvLPwV/view?usp=drive_link" target="_blank">🕎 Aaronitic Blessing</a></p>
+  </section>
+
+  <p>Shalom until tomorrow.</p>
+
+  <div data-include="footer.html"></div>
+</body>
+</html>
