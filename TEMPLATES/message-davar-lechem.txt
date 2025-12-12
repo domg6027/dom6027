@@ -1,0 +1,22 @@
+📨 DAVAR LECHEM – {{DAY_NAME}} {{CREATIONAL_DATE}}
+
+Shalom, Mitspacha!
+
+⭐ **THEME**
+{{THEME_TITLE}}
+
+📘 **READING**
+{{READING_TEXT}}
+
+🟫 **MITZVOT FOCUS**
+{{MITZVOT_TEXT}}
+
+🩵 **REFLECTION**
+{{REFLECTION_TEXT}}
+
+👐 **PRAYER**
+{{PRAYER_TEXT}}
+
+Baruch YHVH.
+
+Shalom until tomorrow.
