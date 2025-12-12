@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Pesach Sheni Seder - Derech Olam Ministries" />
+  <meta name="author" content="Derech Olam Ministries" />
+  <title>PESACH SHENI SEDER – ${creational_date_long}</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="include.js" defer></script>
+</head>
+<body>
+
+  <!-- header & nav -->
+  <div data-include="header.html"></div>
+  <div data-include="nav_bar.html"></div>
+
+  <!-- title -->
+  <h1 style="text-align:center; font-size:x-large;">
+    <b>PESACH SHENI SEDER – ${creational_date_long}</b>
+  </h1>
+
+  <hr />
+
+  <!-- SHOFAR LINK -->
+  <div style="text-align:center; margin: 1em 0; font-size: large;">
+    <a href="https://www.youtube.com/watch?v=8WyLYWzfdaM" target="_blank" rel="noopener noreferrer">
+      <b>SHOFAR BLAST</b>
+    </a>
+  </div>
+  <br /><br />
+
+  <!-- SEDER MESSAGE -->
+  <h2>🍞 Pesach Sheni Seder</h2>
+  <p>Theme: ${theme}</p>
+
+  <h4>📖 Preparation</h4>
+  <p>${preparation}</p>
+
+  <h4>🍷 Meal</h4>
+  <p>${meal}</p>
+
+  <h4>✝️ Communion</h4>
+  <p>${communion}</p>
+
+  <h4>🤲🏻 Closing Prayer</h4>
+  <p>${closing_prayer}</p>
+
+  <!-- Shema & Aaronitic Blessing -->
+  <h4>📖 Shema</h4>
+  <p><a href="https://drive.google.com/file/d/1tmjSWYabpVBSjmbVyqyq9p9jJ36On82r/view?usp=drive_link" target="_blank">✨ Shema</a></p>
+
+  <h4>🕎 Aaronitic Blessing</h4>
+  <p><a href="https://drive.google.com/file/d/14c4sliGku9nJU2fwWv4IJu7qtHRvLPwV/view?usp=drive_link" target="_blank">🕎 Aaronitic Blessing</a></p>
+
+  <p>Shalom until tomorrow.</p>
+
+  <hr />
+  <br /><br />
+
+  <!-- footer -->
+  <div data-include="footer.html"></div>
+</body>
+</html>
