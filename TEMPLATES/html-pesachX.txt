@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Davar Lechem - Daily Word from Derech Olam Ministries">
+  <meta name="author" content="Derech Olam Ministries">
+  <title>PESACH DAY {{DAY_NUMBER}} MORNING MESSAGE, {{CREATIONAL_DATE}}</title>
+  <link rel="stylesheet" href="https://saphahcentral.github.io/saphah/style-public.css">
+
+  <!-- Include header, nav, footer dynamically -->
+  <script src="include.js" defer></script>
+</head>
+<body>
+  <div data-include="header.html"></div>
+  <div data-include="nav_bar.html"></div>
+
+  <!--TITLE AREA-->
+  <div style="clear: both; margin-top: 20px;">
+    <h1 style="color: #1f1f1f; font-family: Montserrat; font-size: x-large; text-align: center;">
+      <b>PESACH DAY {{DAY_NUMBER}} MORNING MESSAGE, {{CREATIONAL_DATE}}</b>
+    </h1>
+  </div>
+
+  <hr />
+
+  <!--SHOFAR AREA-->
+  <br /><br />
+  <div class="separator" style="clear: both; text-align: center;">
+    <a href="{{PESACH_SHOFAR_LINK}}"><b><span style="font-size: large;">SHOFAR BLAST</span></b></a>
+  </div>
+  <br /><br />
+
+  <!--MESSAGE CONTENT-->
+  <h4>📖 Morning Message</h4>
+  <p>{{MORNING_MESSAGE_TEXT}}</p>
+
+  <h4>🤲🏻 Closing Prayer</h4>
+  <p>{{CLOSING_PRAYER_TEXT}}</p>
+
+  <h4>🕎 Shema</h4>
+  <p>
+    <a href="https://drive.google.com/file/d/1tmjSWYabpVBSjmbVyqyq9p9jJ36On82r/view?usp=drive_link" target="_blank">✨ Shema</a>
+  </p>
+
+  <h4>🔥 Aaronitic Blessing</h4>
+  <p>
+    <a href="https://drive.google.com/file/d/14c4sliGku9nJU2fwWv4IJu7qtHRvLPwV/view?usp=drive_link" target="_blank">🕎 Aaronitic Blessing</a>
+  </p>
+
+  <p><strong>Until tomorrow. Shalom!</strong></p>
+
+  <hr />
+  <br /><br />
+
+  <!-- Footer -->
+  <div data-include="footer.html"></div>
+</body>
+</html>
