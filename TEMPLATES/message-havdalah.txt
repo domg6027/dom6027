@@ -1,3 +1,5 @@
+HAVADALAH MESSAGE
+
 📨 HAVDALAH – {{CREATIONAL_DATE_FROM}} → {{CREATIONAL_DATE_TO}}
 
 Shalom, Mishpacha!
