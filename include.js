@@ -1,4 +1,4 @@
-// === DERECH OLAM INCLUDE ENGINE ===
+// === DERECH OLAM INCLUDE ENGINE (DOMG6027) ===
 
 async function insertInclude(targetId, filePath) {
   const container = document.getElementById(targetId);
@@ -6,15 +6,15 @@ async function insertInclude(targetId, filePath) {
 
   try {
     const response = await fetch(filePath);
-    const content = await response.text();
-    container.innerHTML = content;
+    if (!response.ok) throw new Error(response.statusText);
+    container.innerHTML = await response.text();
   } catch (err) {
     console.error("Include error:", filePath, err);
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  insertInclude("include-header", "header.html");
-  insertInclude("include-nav", "nav.html");
-  insertInclude("include-footer", "footer.html");
+  insertInclude("header-placeholder", "header.html");
+  insertInclude("nav-placeholder", "nav.html");
+  insertInclude("footer-placeholder", "footer.html");
 });
