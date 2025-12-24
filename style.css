@@ -107,3 +107,43 @@ footer {
   text-decoration: underline;
   font-weight: bold;
 }
+.main-nav {
+  text-align: center;
+}
+
+.nav-row a {
+  text-decoration: none;
+  margin: 0 4px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #f9fff9;
+  border: 2px solid #00aa00;
+  min-width: 260px;
+  text-align: left;
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background-color: #e6ffe6;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
