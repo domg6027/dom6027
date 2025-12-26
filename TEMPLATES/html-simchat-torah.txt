@@ -24,8 +24,6 @@ HTML: SIMCHAT TORAH
     </h1>
   </div>
 
-  <hr />
-
   <!-- SHOFAR SECTION -->
   <div style="font-size: x-large; text-align: center;">
     <a href="https://youtu.be/VPMicPoXewc?si=7ZbbsqWk90i1TG0m"><b>SHOFAR BLAST</b></a>
