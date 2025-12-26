@@ -8,18 +8,13 @@
   <meta name="author" content="Derech Olam Ministries">
   <title>Davar Lechem - Derech Olam Ministries</title>
   <link rel="stylesheet" href="https://saphahcentral.github.io/saphah/style-public.css">
-  
-  <script defer> // Load modular components
-    fetch("header.html").then(r => r.text()).then(d => document.getElementById("header").innerHTML = d);
-    fetch("nav_bar.html").then(r => r.text()).then(d => document.getElementById("nav_bar").innerHTML = d);
-    fetch("footer.html").then(r => r.text()).then(d => document.getElementById("footer").innerHTML = d);
-  </script>
+  <script src="/include.js" defer></script>
 </head>
 
 <body>
   <!-- Dynamic header, navbar, footer -->
-  <div id="header"></div>
-  <div id="nav_bar"></div>
+  <div id="header-placeholder"></div>
+  <div id="nav-placeholder"></div>
 
   <!-- BODY TITLE (Creational Date) -->
   <h1 style="text-align: center; font-family: Arial, sans-serif; color: #1f1f1f;">
@@ -100,7 +95,7 @@
   <p>Shalom until tomorrow.</p>
 
   <!-- Footer -->
-  <div id="footer"></div>
+  <div id="footer-placeholder"></div>
 
 </body>
 </html>
