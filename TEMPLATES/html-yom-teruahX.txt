@@ -10,22 +10,13 @@ HTML: YOM TERU'AH DAY X
   <meta name="author" content="Derech Olam Ministries">
   <title>YOM TERUAH {{YEAR}} MESSAGE</title>
   <link rel="stylesheet" href="https://saphahcentral.github.io/saphah/style-public.css">
-
-  <script src="include.js" defer></script>
+  <script src="https://domg6027.github.io/dom6027/include.js" defer></script>
 </head>
 
 <body>
-  <div data-include="header.html"></div>
-  <div data-include="nav_bar.html"></div>
-
-  <!-- TITLE AREA -->
-  <div style="clear: both; margin-top: 20px;">
-    <h1 style="color: #1f1f1f; font-family: Montserrat; font-size: x-large; text-align: center;">
-      <b>YOM TERUAH {{YEAR}}</b>
-    </h1>
-  </div>
-
-  <hr />
+  <!-- Dynamic header, navbar, footer -->
+  <div id="header-placeholder"></div>
+  <div id="nav-placeholder"></div>
 
   <!-- SHOFAR LINK -->
   <div style="font-size: x-large; text-align: center;">
@@ -62,6 +53,6 @@ HTML: YOM TERU'AH DAY X
 
   <hr /><br /><br />
 
-  <div data-include="footer.html"></div>
+  <div id="footer-placeholder"></div>
 </body>
 </html>
