@@ -8,11 +8,12 @@
   <meta name="author" content="Derech Olam Ministries">
   <title>Davar Lechem - Derech Olam Ministries</title>
   <link rel="stylesheet" href="https://saphahcentral.github.io/saphahcentral/style-public.css">
+  <script src="/include.js" defer></script>
 </head>
 <body>
   <!-- Dynamic header, navbar, footer -->
-  <div id="header"></div>
-  <div id="nav_bar"></div>
+  <div id="header-placeholder"></div>
+  <div id="nav-placeholder"></div>
 
   <!--TITLE AREA-->
   <div style="clear: both; margin-top: 20px;">
@@ -92,13 +93,8 @@
   <p>If you would like to share a thought or ask a question, please visit the <a href="https://github.com/domg6027/dom6027/discussions/2">General Comments Chat</a> and include today’s date (Gregorian or Creational).</p>
   
   <!-- Footer -->
-  <div id="footer"></div>
+  <div id="footer-placeholder"></div>
 
-  <script>
-    // Load modular components
-    fetch("header.html").then(r => r.text()).then(d => document.getElementById("header").innerHTML = d);
-    fetch("nav_bar.html").then(r => r.text()).then(d => document.getElementById("nav_bar").innerHTML = d);
-    fetch("footer.html").then(r => r.text()).then(d => document.getElementById("footer").innerHTML = d);
-  </script>
 </body>
 </html>
+
