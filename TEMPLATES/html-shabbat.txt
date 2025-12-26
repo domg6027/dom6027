@@ -9,18 +9,17 @@ HTML: SHABBAT
   <meta name="description" content="Shabbat Message - Derech Olam Ministries">
   <meta name="author" content="Derech Olam Ministries">
   <title>Shabbat Message - Derech Olam Ministries</title>
-
-  <link rel="stylesheet" href="style.css">
-  <script src="include.js" defer></script>
+  <link rel="stylesheet" href="https://domg6027.github.io/dom6027/style.css">
+  <script src="https://domg6027.github.io/dom6027/include.js" defer></script>
 </head>
 
 <body>
-  <!-- Dynamic web-only components -->
-  <div data-include="header.html"></div>
-  <div data-include="nav_bar.html"></div>
+  <!-- Dynamic header, navbar, footer -->
+  <div id="header-placeholder"></div>
+  <div id="nav-placeholder"></div>
 
   <!-- CREATIONAL DATE HEADER -->
-  <h1>${creational_date_long}</h1>
+  <h1>Shabbat, ${creational_date_long}</h1>
 
   <!-- SHABBAT MAIN MESSAGE (full content, except Shalom line) -->
   <div style="font-size: x-large; text-align: center;">
@@ -41,6 +40,6 @@ HTML: SHABBAT
 
   <p>Shalom until tomorrow.</p>
 
-  <div data-include="footer.html"></div>
+  <div id="footer-placeholder"></div>
 </body>
 </html>
