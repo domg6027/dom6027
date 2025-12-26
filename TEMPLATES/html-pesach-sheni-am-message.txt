@@ -9,17 +9,14 @@ HTML: PESACH SHENI MORNING MESSAGE
   <meta name="description" content="Davar Lechem - Daily Word from Derech Olam Ministries">
   <meta name="author" content="Derech Olam Ministries">
   <title>PESACH SHENI MORNING MESSAGE, {{CREATIONAL_DATE}}</title>
-  <link rel="stylesheet" href="https://saphahcentral.github.io/saphah/style-public.css">
-
-  <script defer>
-    fetch("header.html").then(r => r.text()).then(d => document.getElementById("header").innerHTML = d);
-    fetch("nav_bar.html").then(r => r.text()).then(d => document.getElementById("nav_bar").innerHTML = d);
-    fetch("footer.html").then(r => r.text()).then(d => document.getElementById("footer").innerHTML = d);
-  </script>
+  <link rel="stylesheet" href="https://domg6027.github.io/dom6027/style.css">
+  <script src="https://domg6027.github.io/dom6027/include.js" defer></script>
 </head>
+
 <body>
-  <div id="header"></div>
-  <div id="nav_bar"></div>
+  <!-- Dynamic header, navbar, footer -->
+  <div id="header-placeholder"></div>
+  <div id="nav-placeholder"></div>
 
   <!--TITLE AREA-->
   <div style="clear: both; margin-top: 20px;">
@@ -54,6 +51,6 @@ HTML: PESACH SHENI MORNING MESSAGE
   <hr />
   <br /><br />
 
-  <div id="footer"></div>
+  <div id="footer-placeholder"></div>
 </body>
 </html>
