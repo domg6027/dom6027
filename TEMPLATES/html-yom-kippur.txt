@@ -9,14 +9,14 @@ HTML: YOM KIPPUR
   <meta name="description" content="Davar Lechem - Daily Word from Derech Olam Ministries">
   <meta name="author" content="Derech Olam Ministries">
   <title>YOM KIPPUR {{YEAR}} MESSAGE</title>
-  <link rel="stylesheet" href="https://saphahcentral.github.io/saphah/style-public.css">
-
-  <script src="include.js" defer></script>
+  <link rel="stylesheet" href="https://domg6027.github.io/saphah/style-public.css">
+  <script src="https://domg6027.github.io/dom6027/include.js" defer></script>
 </head>
 
 <body>
-  <div data-include="header.html"></div>
-  <div data-include="nav_bar.html"></div>
+  <!-- Dynamic header, navbar, footer -->
+  <div id="header-placeholder"></div>
+  <div id="nav-placeholder"></div>
 
   <!-- TITLE AREA -->
   <div style="clear: both; margin-top: 20px;">
@@ -62,6 +62,6 @@ HTML: YOM KIPPUR
 
   <hr /><br /><br />
 
-  <div data-include="footer.html"></div>
+  <div id="footer-placeholder"></div>
 </body>
 </html>
