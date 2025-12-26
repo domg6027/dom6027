@@ -9,15 +9,14 @@ HTML: NEW YEAR OF THE TREES
   <meta name="description" content="Tu BiShvat – The New Year of the Trees" />
   <meta name="author" content="Derech Olam Ministries" />
   <title>Tu BiShvat – ${creational_date_long}</title>
-
-  <link rel="stylesheet" href="style.css">
-  <script src="include.js" defer></script>
+  <link rel="stylesheet" href="https://domg6027.github.io/dom6027/style.css">
+  <script src="https://domg6027.github.io/dom6027/include.js" defer></script>
 </head>
 
 <body>
-  <!-- global header & nav (loaded via include.js) -->
-  <div data-include="header.html"></div>
-  <div data-include="nav_bar.html"></div>
+  <!-- Dynamic header, navbar, footer -->
+  <div id="header-placeholder"></div>
+  <div id="nav-placeholder"></div>
 
   <!-- PAGE TITLE -->
   <h1 style="text-align: center; font-family: Montserrat; font-size: x-large; color: #1f1f1f;">
@@ -41,6 +40,6 @@ HTML: NEW YEAR OF THE TREES
     <p>“He has made all matters beautiful in its time.” – Qoheleth (Ecclesiastes) 3:11</p>
   </section>
 
-  <div data-include="footer.html"></div>
+  <div id="footer-placeholder"></div>
 </body>
 </html>
