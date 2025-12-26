@@ -9,7 +9,7 @@ HTML: YOM TERU'AH DAY X
   <meta name="description" content="Davar Lechem - Daily Word from Derech Olam Ministries">
   <meta name="author" content="Derech Olam Ministries">
   <title>YOM TERUAH {{YEAR}} MESSAGE</title>
-  <link rel="stylesheet" href="https://saphahcentral.github.io/saphah/style-public.css">
+  <link rel="stylesheet" href="https://domg6027.github.io/saphah/style-public.css">
   <script src="https://domg6027.github.io/dom6027/include.js" defer></script>
 </head>
 
@@ -24,7 +24,7 @@ HTML: YOM TERU'AH DAY X
   </div>
   <br /><br />
 
-  <h2>✨ YOM TERUAH ✨</h2>
+  <h2>✨ YOM TERUAH {{YEAR}} ✨</h2>
   <p>Theme: {{THEME}}</p>
 
   <h4>🤲🏻 Opening Prayer</h4>
