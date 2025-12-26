@@ -9,15 +9,14 @@ HTML: PESACH MORNING MESSAGE
   <meta name="description" content="Pesach AM Message - Derech Olam Ministries" />
   <meta name="author" content="Derech Olam Ministries" />
   <title>PESACH MORNING MESSAGE – ${creational_date_long}</title>
-
-  <link rel="stylesheet" href="style.css">
-  <script src="include.js" defer></script>
+  <link rel="stylesheet" href="https://domg6027.github.io/dom6027/style.css">
+  <script src="https://domg6027.github.io/dom6027/include.js" defer></script>
 </head>
-<body>
 
-  <!-- global header & nav -->
-  <div data-include="header.html"></div>
-  <div data-include="nav_bar.html"></div>
+<body>
+  <!-- Dynamic header, navbar, footer -->
+  <div id="header-placeholder"></div>
+  <div id="nav-placeholder"></div>
 
   <!-- Title -->
   <h1 style="text-align:center; font-size:x-large;">
@@ -48,6 +47,6 @@ HTML: PESACH MORNING MESSAGE
   </section>
 
   <!-- footer -->
-  <div data-include="footer.html"></div>
+  <div id="footer-placeholder"></div>
 </body>
 </html>
