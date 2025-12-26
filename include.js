@@ -14,7 +14,7 @@ async function insertInclude(targetId, filePath) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  insertInclude("header-placeholder", "/header.html");
-  insertInclude("nav-placeholder", "/nav.html");
-  insertInclude("footer-placeholder", "/footer.html");
+  insertInclude("header-placeholder", "https://domg6027.github.io/dom6027/header.html");
+  insertInclude("nav-placeholder", "https://domg6027.github.io/dom6027/nav.html");
+  insertInclude("footer-placeholder", "https://domg6027.github.io/dom6027/footer.html");
 });
