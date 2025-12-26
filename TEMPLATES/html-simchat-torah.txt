@@ -9,7 +9,7 @@ HTML: SIMCHAT TORAH
   <meta name="description" content="Davar Lechem - Daily Word from Derech Olam Ministries">
   <meta name="author" content="Derech Olam Ministries">
   <title>Davar Lechem - Simchat Torah</title>
-  <link rel="stylesheet" href="https://domg6027.github.io/domg6027/style-public.css">
+  <link rel="stylesheet" href="https://domg6027.github.io/domg6027/style.css">
   <script src="https://domg6027.github.io/dom6027/include.js" defer></script>
 </head>
 <body>
