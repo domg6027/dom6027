@@ -6,7 +6,7 @@ async function insertInclude(targetId, filePath) {
 
   try {
     const response = await fetch(filePath);
-    if (!response.ok) throw new Error(response.statusText);
+    if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
     container.innerHTML = await response.text();
   } catch (err) {
     console.error("Include error:", filePath, err);
@@ -14,7 +14,7 @@ async function insertInclude(targetId, filePath) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  insertInclude("header-placeholder", "header.html");
-  insertInclude("nav-placeholder", "nav.html");
-  insertInclude("footer-placeholder", "footer.html");
+  insertInclude("header-placeholder", "/header.html");
+  insertInclude("nav-placeholder", "/nav.html");
+  insertInclude("footer-placeholder", "/footer.html");
 });
