@@ -26,28 +26,34 @@
     },
     {
       "id": 5,
+      "text": "People living in disaster stricken areas, especially in the Eastern Cape, South Africa.",
+      "source": "news",
+      "date_added": "2026-02-09"
+    }
+    {
+      "id": 6,
       "text": "Evangelists all over the world, especially in those countries where they are persecuted.",
       "source": "initial",
       "date_added": "2025-12-11"
     },
     {
-      "id": 6,
+      "id": 7,
       "text": "Ill people, especially those with cancer and new viral diseases that are spreading like wildfires.",
       "source": "initial",
       "date_added": "2025-12-11"
     },
     {
-      "id": 7,
+      "id": 8,
       "text": "The coming tribulation as the signs of the birth pains are here already.",
       "source": "initial",
       "date_added": "2025-12-11"
     },
     {
-      "id": 8,
+      "id": 9,
       "text": "Our ministry (Derech Olam Ministries).",
       "source": "initial",
       "date_added": "2025-12-11"
     }
   ],
-  "last_id": 8
+  "last_id": 9
 }
