@@ -36,15 +36,25 @@ HTML: PESACH SEDER
   <section id="pesach-seder" style="max-width: 820px; margin: 0 auto;">
     <h4>📖 Pesach Seder Preparation</h4>
     ${preparation}
+    <a href="https://drive.google.com/file/d/129IHekEStAUs3Nqs8agI4Oft0bW_SEOb/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+      <b>PREPARATION MESSAGE</b>
+    </a>
 
     <h4>🍽️ Pesach Seder Meal</h4>
     ${meal}
+    <a href="https://drive.google.com/file/d/1woah_hWO2aBOodc0xc6E0x93kSmqF0cf/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+      <b>SEDER MEAL MESSAGE</b>
+    </a>
 
     <h4>✝️ Pesach Seder Communion</h4>
     ${communion}
+    <a href="https://drive.google.com/file/d/1XwoKOXwYSDYe6tpTNH5VDduVcPT1SFfC/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+      <b>COMMUNION MESSAGE</b>
+    </a>
 
-    <h4>📜 Message / Sermon</h4>
-    ${sermon}
+    <h4>📜 Message</h4>
+    ${message}
+
   </section>
 
   <!-- CLOSING BLOCK (same as Shabbat) -->
