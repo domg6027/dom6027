@@ -12,9 +12,6 @@ Shalom, Mitspacha!
 
 *Baruch YHVH.*
 
-**🍷 Communion**
-{COMMUNION_CONTENT}
-
 **📖 Pesach Seder Preparation**
 {PESACH_PREPARATION}
 
@@ -25,7 +22,7 @@ Shalom, Mitspacha!
 
 [**SEDER MEAL MESSAGE**](https://drive.google.com/file/d/1woah_hWO2aBOodc0xc6E0x93kSmqF0cf/view?usp=drive_link)
 
-**✝️ Pesach Seder Communion**
+**🍷 Pesach Seder Communion**
 {PESACH_COMMUNION}
 
 [**COMMUNION MESSAGE**](https://drive.google.com/file/d/1XwoKOXwYSDYe6tpTNH5VDduVcPT1SFfC/view?usp=drive_link)
