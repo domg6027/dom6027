@@ -1,0 +1,41 @@
+SPECIAL SHABBAT MESSAGE FOR PESACH SEDER
+
+### 🌿 SPECIAL SHABBAT — {DAY_NAME} {CREATIONAL_DATE}
+
+Shalom, Mitspacha!
+
+**⭐ THEME**
+{THEME_TITLE}
+
+**🤲🏻 Opening Prayer**
+{OPENING_PRAYER_CONTENT}
+
+*Baruch YHVH.*
+
+**🍷 Communion**
+{COMMUNION_CONTENT}
+
+**📖 Pesach Seder Preparation**
+{PESACH_PREPARATION}
+
+[**PREPARATION MESSAGE**](https://drive.google.com/file/d/129IHekEStAUs3Nqs8agI4Oft0bW_SEOb/view?usp=drive_link)
+
+**🍽️ Pesach Seder Meal**
+{PESACH_MEAL}
+
+[**SEDER MEAL MESSAGE**](https://drive.google.com/file/d/1woah_hWO2aBOodc0xc6E0x93kSmqF0cf/view?usp=drive_link)
+
+**✝️ Pesach Seder Communion**
+{PESACH_COMMUNION}
+
+[**COMMUNION MESSAGE**](https://drive.google.com/file/d/1XwoKOXwYSDYe6tpTNH5VDduVcPT1SFfC/view?usp=drive_link)
+
+**📖 Message**
+{MESSAGE_CONTENT}
+
+**🤲🏻 Closing Prayer**
+{CLOSING_PRAYER_CONTENT}
+
+**Baruch YHVH.**
+
+Shalom until tomorrow!
