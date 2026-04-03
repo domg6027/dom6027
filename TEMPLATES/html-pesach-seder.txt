@@ -56,9 +56,6 @@ HTML: PESACH SEDER
       <b>COMMUNION MESSAGE</b>
     </a>
 
-    <h4>📜 Message</h4>
-    ${message}
-
   </section>
 
   <!-- CLOSING BLOCK (same as Shabbat) -->
