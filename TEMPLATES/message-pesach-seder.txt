@@ -12,6 +12,12 @@ Shalom, Mitspacha!
 
 *Baruch YHVH.*
 
+**📖 Message**
+{MESSAGE_CONTENT}
+
+**🤲🏻 Closing Prayer**
+{CLOSING_PRAYER_CONTENT}
+
 **📖 Pesach Seder Preparation**
 {PESACH_PREPARATION}
 
@@ -26,12 +32,6 @@ Shalom, Mitspacha!
 {PESACH_COMMUNION}
 
 [**COMMUNION MESSAGE**](https://drive.google.com/file/d/1XwoKOXwYSDYe6tpTNH5VDduVcPT1SFfC/view?usp=drive_link)
-
-**📖 Message**
-{MESSAGE_CONTENT}
-
-**🤲🏻 Closing Prayer**
-{CLOSING_PRAYER_CONTENT}
 
 **Baruch YHVH.**
 
