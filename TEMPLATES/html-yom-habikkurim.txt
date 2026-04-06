@@ -35,9 +35,6 @@ HTML: YOM HABIKKURIM
   <h4>📖 Message</h4>
   <p>{{MESSAGE_TEXT}}</p>
 
-  <h4>🤲🏻 Closing Prayer</h4>
-  <p>{{CLOSING_PRAYER}}</p>
-
   <h4>🕎 Shema</h4>
   <p>
     <a href="https://drive.google.com/file/d/1tmjSWYabpVBSjmbVyqyq9p9jJ36On82r/view?usp=drive_link" target="_blank">✨ Shema</a>
