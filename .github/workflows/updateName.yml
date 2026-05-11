@@ -28,15 +28,15 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      # 4. Run updateName.js only on main root HTML files
+      # 4. Run updateName.js (root folder only)
       - name: Run updateName.js
         run: node updateName.js
 
-      # 5. Show modified files
+      # 5. Show modified files for confirmation
       - name: Show Git Status
         run: git status
 
-      # 6. Commit & Push changes using PAT
+      # 6. Commit & Push changes using PAT secret
       - name: Commit & Push Changes
         env:
           GITHUB_PAT: ${{ secrets.DOMG6027_UPDATE_TEMP }}
