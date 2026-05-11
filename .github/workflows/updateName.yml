@@ -1,0 +1,39 @@
+name: Update Derech Olam Name
+
+# Trigger manually or on push to main
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to run update on'
+        required: true
+        default: 'main'
+
+jobs:
+  update-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run updateName.js
+        run: node updateName.js
+
+      - name: Show git status
+        run: git status
+
+      - name: Commit & Push Changes
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Updated Derech Olam name to Mishkan International across HTML files"
+          git push origin ${{ github.event.inputs.branch }}
