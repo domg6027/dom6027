@@ -1,48 +1,26 @@
 name: Update Derech Olam Name to Mishkan
 
-# Trigger manually
 on:
   workflow_dispatch:
-    inputs:
-      branch:
-        description: 'Branch to run update on'
-        required: true
-        default: 'main'
 
 jobs:
   update-name:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout repository
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # 2. Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
-      # 3. Install dependencies if needed
       - name: Install Dependencies
         run: npm install
 
-      # 4. Run updateName.js (root folder only)
-      - name: Run updateName.js
-        run: node updateName.js
-
-      # 5. Show modified files for confirmation
-      - name: Show Git Status
-        run: git status
-
-      # 6. Commit & Push changes using PAT secret
-      - name: Commit & Push Changes
+      - name: Run Update Script
         env:
           GITHUB_PAT: ${{ secrets.DOMG6027_UPDATE_TEMP }}
-        run: |
-          git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "actions@github.com"
-          git add .
-          git commit -m "Updated Derech Olam name to Mishkan International across main HTML files"
-          git push https://x-access-token:${GITHUB_PAT}@github.com/${{ github.repository }} HEAD:${{ github.event.inputs.branch }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: node updateName.js
