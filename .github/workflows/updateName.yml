@@ -13,9 +13,9 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          persist-credentials: false  # prevents automatic GITHUB_TOKEN override
+          persist-credentials: false
 
-      # 2️⃣ Setup Node.js environment
+      # 2️⃣ Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -32,9 +32,15 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin "https://x-access-token:${{ secrets.DOMG6027_UPDATE_TEMP }}@github.com/${{ github.repository }}.git"
 
-      # 5️⃣ Optional log to confirm remote URL (token will be masked automatically)
-      - name: Log remote URL for verification
-        run: git remote -v
+      # 5️⃣ Verify remote URL contains x-access-token (abort if not)
+      - name: Verify remote uses Classic PAT
+        run: |
+          url=$(git remote get-url origin)
+          echo "Remote URL is: $url"
+          if [[ "$url" != https://x-access-token:*@github.com/* ]]; then
+            echo "ERROR: Remote is not configured with Classic PAT. Aborting!"
+            exit 1
+          fi
 
       # 6️⃣ Run the update script
       - name: Run update script
