@@ -1,48 +1,37 @@
 // updateName.js
-// Run with: node updateName.js
-// Updates "Derech Olam Ministries" → "Derech Olam Mishkan International" in main HTML files
+// Updates "Derech Olam Ministries" → "Derech Olam Mishkan International"
+// Only for HTML files in the main root folder
+// Skips header.html, footer.html, nav.html
 
 const fs = require('fs');
 const path = require('path');
 
-// Path to the main folder (Codespace root)
-const mainFolder = './'; // adjust if needed
-
-// Files to skip
+const mainFolder = './'; // main root folder
 const skipFiles = ['header.html', 'footer.html', 'nav.html'];
 
-// Read all files in main folder
+// Read all files in the main folder
 fs.readdir(mainFolder, (err, files) => {
-  if (err) {
-    console.error('Error reading folder:', err);
-    return;
-  }
+  if (err) throw err;
 
   files.forEach(file => {
     const filePath = path.join(mainFolder, file);
-    const ext = path.extname(file);
 
-    // Skip non-HTML files and excluded files
-    if (ext === '.html' && !skipFiles.includes(file)) {
-      // Read file
-      fs.readFile(filePath, 'utf8', (err, data) => {
-        if (err) {
-          console.error('Error reading file:', file, err);
-          return;
-        }
+    // Only process HTML files that are not skipped and are actual files
+    if (
+      path.extname(file) === '.html' &&
+      !skipFiles.includes(file) &&
+      fs.lstatSync(filePath).isFile()
+    ) {
+      // Read file content
+      let data = fs.readFileSync(filePath, 'utf8');
 
-        // Replace text
-        const result = data.replace(/Derech Olam Ministries/g, 'Derech Olam Mishkan International');
+      // Replace all occurrences
+      data = data.replace(/Derech Olam Ministries/g, 'Derech Olam Mishkan International');
 
-        // Write updated file
-        fs.writeFile(filePath, result, 'utf8', (err) => {
-          if (err) {
-            console.error('Error writing file:', file, err);
-          } else {
-            console.log(`Updated ${file}`);
-          }
-        });
-      });
+      // Write updated content back to file
+      fs.writeFileSync(filePath, data, 'utf8');
+
+      console.log(`Updated ${file}`);
     }
   });
 });
