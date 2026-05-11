@@ -6,6 +6,10 @@ on:
 jobs:
   update-name:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true       # Force actions to Node.js 24
+      DOMG6027_UPDATE_TEMP: ${{ secrets.DOMG6027_UPDATE_TEMP }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
 
     steps:
       - name: Checkout Repository
@@ -14,13 +18,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '24'   # Use Node.js 24 for your workflow
 
       - name: Install Dependencies
         run: npm install
 
       - name: Run Update Script
-        env:
-          DOMG6027_UPDATE_TEMP: ${{ secrets.DOMG6027_UPDATE_TEMP }} # <-- pass secret under expected name
-          GITHUB_REPOSITORY: ${{ github.repository }}
         run: node updateName.js
