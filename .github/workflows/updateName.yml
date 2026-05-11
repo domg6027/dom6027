@@ -12,8 +12,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0         # full history for proper git operations
-          persist-credentials: false  # prevent automatic GITHUB_TOKEN override
+          fetch-depth: 0
+          persist-credentials: false  # prevents automatic GITHUB_TOKEN override
 
       # 2️⃣ Setup Node.js environment
       - name: Setup Node.js
@@ -32,11 +32,15 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin "https://x-access-token:${{ secrets.DOMG6027_UPDATE_TEMP }}@github.com/${{ github.repository }}.git"
 
-      # 5️⃣ Run the update script
+      # 5️⃣ Optional log to confirm remote URL (token will be masked automatically)
+      - name: Log remote URL for verification
+        run: git remote -v
+
+      # 6️⃣ Run the update script
       - name: Run update script
         run: node updateName.js
 
-      # 6️⃣ Commit and push changes
+      # 7️⃣ Commit and push changes
       - name: Commit and push changes
         run: |
           git add .
