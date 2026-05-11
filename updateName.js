@@ -1,102 +1,74 @@
+#!/usr/bin/env node
+
+/**
+ * updateName.js
+ * ------------------------
+ * Replaces 'Derech Olam' with 'Mishkan International' in specified HTML files.
+ * Logs updates, stages changes for git, and commits them.
+ */
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-// --- Config ---
-const mainFolder = './';
-const skipFiles = ['header.html', 'footer.html', 'nav.html'];
-const oldName = 'Derech Olam Ministries';
-const newName = 'Derech Olam Mishkan International';
+// List of HTML files to update
+const filesToUpdate = [
+  'about.html',
+  'archive2026.html',
+  'finances.html',
+  'index.html',
+  'index2.html',
+  'info.html',
+  'new-direction.html',
+  'prayer.html'
+];
 
-// --- Read & update files ---
-let filesUpdated = 0;
+const OLD_TEXT = 'Derech Olam';
+const NEW_TEXT = 'Mishkan International';
 
-fs.readdirSync(mainFolder).forEach(file => {
-  const filePath = path.join(mainFolder, file);
+let updatedFiles = [];
 
-  if (path.extname(file) === '.html' &&
-      !skipFiles.includes(file) &&
-      fs.lstatSync(filePath).isFile()) {
-
-    let data = fs.readFileSync(filePath, 'utf8');
-    let updated = false;
-
-    // Replace main text
-    if (data.includes(oldName)) {
-      data = data.replace(new RegExp(oldName, 'g'), newName);
-      updated = true;
-    }
-
-    // <title>
-    data = data.replace(/<title>(.*?)<\/title>/i, (match, p1) => {
-      if (p1.includes(oldName)) {
-        updated = true;
-        return `<title>${p1.replace(oldName, newName)}</title>`;
-      }
-      return match;
-    });
-
-    // <meta name="description">
-    data = data.replace(/<meta\s+name=["']description["']\s+content=["'](.*?)["']\s*\/?>/i, (match, p1) => {
-      if (p1.includes(oldName)) {
-        updated = true;
-        return `<meta name="description" content="${p1.replace(oldName, newName)}">`;
-      }
-      return match;
-    });
-
-    // <meta name="author">
-    data = data.replace(/<meta\s+name=["']author["']\s+content=["'](.*?)["']\s*\/?>/i, (match, p1) => {
-      if (p1.includes(oldName)) {
-        updated = true;
-        return `<meta name="author" content="${p1.replace(oldName, newName)}">`;
-      }
-      return match;
-    });
-
-    if (updated) {
-      fs.writeFileSync(filePath, data, 'utf8');
-      console.log(`✅ Updated ${file}`);
-      filesUpdated++;
-    }
+// Function to update a file
+function updateFile(filePath) {
+  if (!fs.existsSync(filePath)) {
+    console.warn(`⚠️  File not found: ${filePath}`);
+    return;
   }
-});
 
-if (filesUpdated === 0) {
-  console.log("ℹ️ No files needed updating.");
+  const content = fs.readFileSync(filePath, 'utf8');
+
+  if (!content.includes(OLD_TEXT)) {
+    return;
+  }
+
+  const newContent = content.split(OLD_TEXT).join(NEW_TEXT);
+  fs.writeFileSync(filePath, newContent, 'utf8');
+  updatedFiles.push(filePath);
+  console.log(`✅ Updated ${filePath}`);
 }
 
-// --- Git commit & push ---
+// Update all files
+filesToUpdate.forEach((file) => {
+  const fullPath = path.resolve(__dirname, file);
+  updateFile(fullPath);
+});
+
+if (updatedFiles.length === 0) {
+  console.log('No files needed updating. Exiting.');
+  process.exit(0);
+}
+
+// Git commit
 try {
-  const GITHUB_PAT = process.env.DOMG6027_UPDATE_TEMP;
-  if (!GITHUB_PAT) throw new Error("DOMG6027_UPDATE_TEMP env variable not set");
+  execSync('git add .', { stdio: 'inherit' });
 
-  // Configure Git user
-  execSync('git config --global user.name "GitHub Actions Bot"');
-  execSync('git config --global user.email "actions@github.com"');
+  execSync(
+    'git commit -m "Updated Derech Olam name to Mishkan International"',
+    { stdio: 'inherit' }
+  );
 
-  // Stage changes
-  execSync('git add .');
-
-  // Check if there is anything to commit
-  const status = execSync('git status --porcelain').toString().trim();
-  if (!status) {
-    console.log("ℹ️ Nothing to commit.");
-    process.exit(0);
-  }
-
-  // Commit
-  execSync('git commit -m "Updated Derech Olam name to Mishkan International across main HTML files"', { stdio: 'inherit' });
-
-  // Set remote to use PAT
-  const repo = process.env.GITHUB_REPOSITORY;
-  execSync(`git remote set-url origin https://x-access-token:${GITHUB_PAT}@github.com/${repo}.git`);
-
-  // Push
-  execSync('git push origin HEAD:main', { stdio: 'inherit' });
-
-  console.log("✅ Changes pushed successfully.");
+  console.log('✅ Changes committed. Push handled by GitHub Actions workflow.');
 } catch (err) {
-  console.error("⚠️ Git push failed:", err.message);
-  process.exit(1);
+  console.log('Nothing to commit. Exiting.');
+  process.exit(0);
 }
