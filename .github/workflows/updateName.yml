@@ -21,6 +21,6 @@ jobs:
 
       - name: Run Update Script
         env:
-          GITHUB_PAT: ${{ secrets.DOMG6027_UPDATE_TEMP }}
+          DOMG6027_UPDATE_TEMP: ${{ secrets.DOMG6027_UPDATE_TEMP }} # <-- pass secret under expected name
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: node updateName.js
