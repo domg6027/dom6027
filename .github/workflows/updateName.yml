@@ -1,4 +1,4 @@
-name: Update Derech Olam Name to Mishkan
+name: Update Derech Olam Name
 
 on:
   workflow_dispatch:
@@ -6,16 +6,12 @@ on:
 jobs:
   update-name:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-      DOMG6027_UPDATE_TEMP: ${{ secrets.DOMG6027_UPDATE_TEMP }}
-      GITHUB_REPOSITORY: ${{ github.repository }}
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0   # Ensure full history for Git push
+          fetch-depth: 0  # Ensure full history for git push
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -25,5 +21,17 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Configure Git to use Classic PAT
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.DOMG6027_UPDATE_TEMP }}@github.com/${{ github.repository }}.git
+
       - name: Run update script
         run: node updateName.js
+
+      - name: Commit and push changes
+        run: |
+          git add .
+          git commit -m "Update Derech Olam name to Mishkan International" || echo "No changes to commit"
+          git push origin HEAD:main
