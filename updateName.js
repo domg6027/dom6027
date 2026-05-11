@@ -64,8 +64,8 @@ fs.readdirSync(mainFolder).forEach(file => {
 
 // --- Git commit & push ---
 try {
-  const GITHUB_PAT = process.env.GITHUB_PAT;
-  if (!GITHUB_PAT) throw new Error("GITHUB_PAT environment variable not set");
+  const GITHUB_PAT = process.env.DOMG6027_UPDATE_TEMP; // <-- use the updated secret
+  if (!GITHUB_PAT) throw new Error("DOMG6027_UPDATE_TEMP environment variable not set");
 
   // Configure Git
   execSync('git config --global user.name "GitHub Actions Bot"');
@@ -77,9 +77,9 @@ try {
   // Commit
   execSync('git commit -m "Updated Derech Olam name to Mishkan International across main HTML files"', { stdio: 'inherit' });
 
-  // Push using PAT
+  // Push using PAT explicitly
   const repo = process.env.GITHUB_REPOSITORY;
-  execSync(`git push https://x-access-token:${GITHUB_PAT}@github.com/${repo} HEAD`, { stdio: 'inherit' });
+  execSync(`git push https://x-access-token:${GITHUB_PAT}@github.com/${repo} HEAD:main`, { stdio: 'inherit' });
 
   console.log("✅ Changes pushed successfully");
 } catch (err) {
