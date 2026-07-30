@@ -6,8 +6,6 @@
     "rules": [
       "One theme per calendar day",
       "February 29 included",
-      "Shabbat ignored at this level",
-      "Erev Shabbat may extract two consecutive days",
       "Repeated themes are subdivided or expanded (e.g., desert incidents)"
     ]
   },
